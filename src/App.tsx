@@ -4,6 +4,8 @@ import Navbar from "./components/navbar/Navbar";
 import Products from "./pages/Products/Products";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
+import Product from "./pages/product/Product";
+import User from "./pages/user/User";
 import Users from "./pages/users/Users";
 import "./styles/global.scss";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -40,8 +42,16 @@ function App() {
           element: <Users />,
         },
         {
+          path: "/users/:id",
+          element: <User />,
+        },
+        {
           path: "/products",
           element: <Products />,
+        },
+        {
+          path: "/products/:id",
+          element: <Product />,
         },
       ],
     },
